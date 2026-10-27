@@ -31,8 +31,10 @@ def deploy_render():
             "plan": "free",
             "region": "oregon",
             "rootDir": "backend",
-            "buildCommand": "pip install -r requirements.txt",
-            "startCommand": "uvicorn app.main:app --host 0.0.0.0 --port $PORT",
+            "envSpecificDetails": {
+                "buildCommand": "pip install -r requirements.txt",
+                "startCommand": "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+            },
             "envVars": [
                 {"key": "SUPABASE_URL", "value": SUPABASE_URL},
                 {"key": "SUPABASE_KEY", "value": SUPABASE_KEY},
@@ -49,7 +51,7 @@ def deploy_render():
     if r1.status_code in [200, 201]:
         b_data = r1.json()
         backend_url = b_data.get("serviceDetails", {}).get("url")
-        print(f"✓ Backend Service Created! ID: {b_data.get('id')} | Live URL: {backend_url}")
+        print(f"[OK] Backend Service Created! ID: {b_data.get('id')} | Live URL: {backend_url}")
     else:
         print(f"Note/Error on Backend Service: {r1.status_code} - {r1.text}")
 
@@ -76,7 +78,7 @@ def deploy_render():
     if r2.status_code in [200, 201]:
         f_data = r2.json()
         frontend_url = f_data.get("serviceDetails", {}).get("url")
-        print(f"✓ Frontend Static Site Created! ID: {f_data.get('id')} | Live URL: {frontend_url}")
+        print(f"[OK] Frontend Static Site Created! ID: {f_data.get('id')} | Live URL: {frontend_url}")
     else:
         print(f"Note/Error on Frontend Site: {r2.status_code} - {r2.text}")
 
