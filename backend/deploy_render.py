@@ -3,7 +3,7 @@ import requests
 
 RENDER_API_KEY = "rnd_xxxELzI1jQWQteSKdZXDqapoaLqA"
 OWNER_ID = "tea-dacnlim1egvs73d8u3h0"
-REPO_URL = os.getenv("GITHUB_REPO_URL", "https://github.com/lohit-23/shikshasetu-ai")
+REPO_URL = os.getenv("GITHUB_REPO_URL", "https://github.com/lohit-23/APAAR-ID")
 
 SUPABASE_URL = "https://sznupbyahmpgtfcmaqul.supabase.co"
 SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN6bnVwYnlhaG1wZ3RmY21hcXVsIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc5MzExMDc2MSwiZXhwIjoyMTA4Njg2NzYxfQ.sADuX7Ksw15X8bgOocguPhRTrW6MjUpXkKCdXjWaj7w"
