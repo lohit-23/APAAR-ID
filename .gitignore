@@ -1,0 +1,28 @@
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Node & Frontend
+node_modules/
+dist/
+.vite/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+# Environment Variables & Secrets
+.env
+!.env.example
+*.local
+
+# System & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.system_generated/
