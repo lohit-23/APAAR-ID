@@ -39,3 +39,5 @@ services:
         value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN6bnVwYnlhaG1wZ3RmY21hcXVsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMxMTA3NjEsImV4cCI6MjEwODY4Njc2MX0.Kfu2EZw1vYxO9i1WV2MmI3cffxd8ys9Bu0Q6-dvRWLg
       - key: VITE_PROTOTYPE_MODE
         value: production
+      - key: VITE_API_URL
+        value: https://shikshasetu-backend-6a77.onrender.com
